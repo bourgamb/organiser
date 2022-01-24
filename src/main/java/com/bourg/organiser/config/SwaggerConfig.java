@@ -24,7 +24,7 @@ public class SwaggerConfig {
                 .groupName("organiser-api")
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.ey.organiser.controllers"))
+                .apis(RequestHandlerSelectors.basePackage("com.bourg.organiser.controllers"))
                 .paths(regex("/organiser.*"))
                 .build();
 
