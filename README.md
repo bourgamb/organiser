@@ -1,4 +1,4 @@
-# The Toda Organiser :-) 
+# The Todo Organiser :-) 
 
 **To build and install locally:**<br>
 Execute `mvn install` in root directory
