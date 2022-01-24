@@ -91,3 +91,4 @@ ___
 - Centralise creation of beans in config class instead of using spring annotations
   - This would enable use of Quarkus to enable native builds for faster startup and reduced memory footprint
 - Investigate use of spring native to reduce war size and start up
+- CI/CD integration using CircleCI 
