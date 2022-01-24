@@ -92,7 +92,7 @@ public class OrganiserMockMvcControllerIT {
 
         String jsonBody  = "{\"id\":\"6\",\"userFirstName\":\"Frank\",\"userSurname\":\"Marshall\",\"tasks\":[{\"id\":8, \"taskName\":\"Haircut\",\"taskDescription\":\"Get haircut again!\",\"taskStatus\":\"IN_PROGRESS\"}]}";
 
-        mockMvc.perform(post("/organiser/todos")
+        mockMvc.perform(post("/organiser/todos/update")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonBody)
                         .characterEncoding("utf-8"))
@@ -111,6 +111,7 @@ public class OrganiserMockMvcControllerIT {
                 .getResponse()
                 .getContentAsString();
 
-        assertThat(responseBody).isEqualTo("Successfully removed");
+        String expectedResponse = "{\"message\" : \"Successfully removed\"}";
+        assertThat(responseBody).isEqualTo(expectedResponse);
     }
 }

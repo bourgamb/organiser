@@ -60,7 +60,7 @@ public class OrganiserController {
 
     }
 
-    @PostMapping(path="/organiser/todos", produces={"application/json"})
+    @PostMapping(path="/organiser/todos/update", produces={"application/json"})
     public ResponseEntity<TaskCommand> saveOrUpdateTask(@RequestBody TaskCommand taskCommand){
 
         log.info("Starting saveOrUpdateTask...");
@@ -87,7 +87,7 @@ public class OrganiserController {
         final HttpHeaders httpHeaders= new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
 
-        ResponseEntity<String> removalResponse = new ResponseEntity<>("Successfully removed", httpHeaders, HttpStatus.OK);
+        ResponseEntity<String> removalResponse = new ResponseEntity<>("{\"message\" : \"Successfully removed\"}", httpHeaders, HttpStatus.OK);
 
         log.info("Ending removeTask...");
 
